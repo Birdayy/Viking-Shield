@@ -44,12 +44,12 @@
 
         <div class="mySlides fade">
             <div class="numbertext">3 / 7</div>
-            <img src="photo3.png" alt="Photo3"  width="750" height="400">
+            <img src="photo3.png" alt="Photo3" width="750" height="400">
             <div class="text">I then used object mode to change the width of the sphere to make it into the shape of a shield</div>
         </div>
         <div class="mySlides fade">
             <div class="numbertext">4 / 7</div>
-            <img src="photo4.png" alt="Photo4"  width="750" height="400">
+            <img src="photo4.png" alt="Photo4" width="750" height="400">
             <div class="text">I then rotated the object with object mode, so it is facing forward </div>
         </div>
 
@@ -61,7 +61,7 @@
 
         <div class="mySlides fade">
             <div class="numbertext">6 / 7</div>
-            <img src="photo6.png" alt="Photo6"  width="750" height="400">
+            <img src="photo6.png" alt="Photo6" width="750" height="400">
             <div class="text">I also made the back of the shield brown to look wooden for added effected</div>
         </div>
 
@@ -71,53 +71,52 @@
             <div class="text">I researched what some common shields looked like and decided to add red and black to the front of the shield, it was quite difficult to keep the spike silver while making the face black and red.</div>
         </div>
 
-       
-    <br>
 
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-        <span class="dot" onclick="currentSlide(6)"></span>
-        <span class="dot" onclick="currentSlide(7)"></span>
-    </div>
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
+        <br>
 
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+        </div>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
 
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {
-                slideIndex = 1
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
             }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
 
-       
-    </script>
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+
+        </script>
 </body>

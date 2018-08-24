@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet href="style.css">
+    <title>Tools</title>
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a class="active" href="tools.html">Tools</a>
+        <a href="Comparison.html">Comparison</a>
+        <a href="My%20final%20object.html">My Final object</a>
+        <a href="Inspiration%20images.html">Inspiration images</a>
+        <a href="https://www.blender.org/">Blender</a>
+    </div>
+
+
+    <div class="title2"> Tools
+    </div>
+
+    <div class="tools1">
+        When I made my object I decided to use the object and transformation tools. I only used these two tools because I was brand new to the program I was using which was Blender and these were the easiest tools to use.
+    </div>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 7</div>
+            <img src="photo1.png" alt="Photo1" width="750" height="400">
+            <div class="text"></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 7</div>
+            <img src="photo2.png" alt="Photo2" width="750" height="400">
+            <div class="text">I started by deleting the cube and creating a UV Sphere</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 7</div>
+            <img src="photo3.png" alt="Photo3"  width="750" height="400">
+            <div class="text">I then used object mode to change the width of the sphere to make it into the shape of a shield</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 7</div>
+            <img src="photo4.png" alt="Photo4"  width="750" height="400">
+            <div class="text">I then rotated the object with object mode, so it is facing forward </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 7</div>
+            <img src="photo1.2.png" alt="Photo5" width="750" height="400">
+            <div class="text">I then added a spike to the middle of the shield by transforming it in edit mode</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">6 / 7</div>
+            <img src="photo6.png" alt="Photo6"  width="750" height="400">
+            <div class="text">I also made the back of the shield brown to look wooden for added effected</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">7 / 7</div>
+            <img src="photo5.png" alt="Photo7" width="750" height="400">
+            <div class="text">I researched what some common shields looked like and decided to add red and black to the front of the shield, it was quite difficult to keep the spike silver while making the face black and red.</div>
+        </div>
+
+       
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+       
+    </script>
+</body>
